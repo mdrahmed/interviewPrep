@@ -1,3 +1,18 @@
+#     4
+#    / \
+#   3   6
+#  /    /\
+# 2    5  7
+# bfs traverses level wise
+# bfs = 4,3,6,2,5,7
+
+# queue = [4]
+# queue = [3,6] = 4
+# queue = [6,2] = 4,3
+# queue = [2,5,7] = 4,3,6
+# queue = [5,7] = 4,3,6,2
+# queue = [7] = 4,3,6,2,5
+# queue = [] = 4,3,6,2,5
 
 from collections import deque
 
