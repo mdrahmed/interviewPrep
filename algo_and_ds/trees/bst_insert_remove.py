@@ -21,7 +21,7 @@ def insert(root, val):
 # Time complexity = O(height) or, O(logn)
 
 
-# We need minimum node on rightsubtree to remove a node
+# We need minimum node on right subtree to remove a node
 def minValueNode(root):
     curr = root
     # goto the the left leaf node
