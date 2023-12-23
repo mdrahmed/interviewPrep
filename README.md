@@ -1,4 +1,6 @@
 
+## Time complexity
+Python uses Timsort and this sorting has `O(nlogn)` time complexity.
 
 ## strings
 Get the character index,
