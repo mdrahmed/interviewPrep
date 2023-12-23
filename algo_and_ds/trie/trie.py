@@ -12,7 +12,7 @@ class Trie():
     def insert(self, word):
         curr = self.root
         for c in word:
-            if c not in curr:
+            if c not in curr.children:
                 curr.children[c] = TrieNode()
             curr = curr.children[c]
         curr.word = True 
@@ -20,7 +20,7 @@ class Trie():
     def search(self, word):
         curr = self.root
         for c in word:
-            if c not in curr:
+            if c not in curr.children:
                 return False
             curr = curr.children[c]
         return curr.word
@@ -28,7 +28,7 @@ class Trie():
     def searchPrefix(self, prefix):
         curr = self.root
         for c in prefix:
-            if c not in curr:
+            if c not in curr.children:
                 return False
             curr = curr.children[c]
         return True
