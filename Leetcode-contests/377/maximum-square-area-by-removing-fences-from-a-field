@@ -1,3 +1,6 @@
+'''
+Link: https://leetcode.com/contest/weekly-contest-377/problems/maximum-square-area-by-removing-fences-from-a-field/
+'''
 class Solution:
     def maximizeSquareArea(self, m: int, n: int, h: List[int], v: List[int]) -> int:
         M = 10 ** 9 + 7

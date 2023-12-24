@@ -17,7 +17,7 @@ Balanced binary search tree: For every single subtree, the heights of left and r
     Suppose, in the above BST, 
         1. Height of left and right subtree of root 2 has 1 on left and 2 on right. So, they differ by 1.
         2. Height of left and right subtree of root 1 has no left and right child. So, they differ by 0.
-        3. Height of left of right subtree of root 3 has 1 left child and no right child. So, they differ by 1
+        3. Height of left of right subtree of root 3 has no left child but 1 right child. So, they differ by 1
 
 So, this is a balanced binary tree and searching any node there will take O(logn) times.
 
