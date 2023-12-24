@@ -1,0 +1,27 @@
+class Solution:
+    def maximizeSquareArea(self, m: int, n: int, h: List[int], v: List[int]) -> int:
+        M = 10 ** 9 + 7
+        
+        def getSides(fences, L):
+            sides = set()
+            fences.append(1)
+            fences.append(L)
+            
+            fences.sort()
+            N = len(fences)
+            for i in range(N):
+                for j in range(i+1, N):
+                    # print(fences[j], fences[i])
+                    sides.add(fences[j] - fences[i])
+            # print(sides)
+            return sides
+        
+        h = getSides(h, m)
+        v = getSides(v, n)
+        # print(h,v)
+        o = h & v
+        # print(o)
+        if len(o) == 0:
+            return -1
+        return (max(o) ** 2) % M
+                
