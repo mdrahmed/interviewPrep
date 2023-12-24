@@ -1,33 +1,41 @@
-class TrieNode:
+class Heap():
     def __init__(self):
-        self.children = {}
-        self.end = False
+        self.heap = [0]
 
-Class Trie:
-    def __init__(self):
-        self.root = TrieNode()
+    def push(self, val):
+        self.heap.append(val)
+        i = len(self.heap) -1
 
-    def insert(self, word):
-        curr = self.root
-        for c in word:
-            if c not in curr:
-                curr.children[c] = TrieNode()
-            curr = curr.children[c]
-        curr.end = True
+        while i > 1 and self.heap[i] < self.heap[i //2]:
+            tmp = self.heap[i]
+            self.heap[i] = self.heap[i // 2]
+            self.heap[i //2] = tmp
+            i = i // 2
 
-    def search(self, word):
-        curr = self.root
-        for c in word:
-            if c not in curr:
-                return False
-            curr = curr.children[c]
-        return curr.end
+    def pop(self):
+        if len(self.heap) == 1:
+            return None
+        if len(self.heap) == 2:
+            return self.heap.pop()
 
-    def searchPrefix(self, pre):
-        curr = self.root
-        for c in pre:
-            if c not in curr:
-                return False
-            curr = curr.children[c]
-        return True
+        res = self.heap[1]
+        self.heap[1] = self.heap.pop()
+        i = 1
+        
+        while 2 * i < len(self.heap):
+            if(2 * i + 1 < len(self.heap)) and self.heap[2 * i+1] 
+             < self.heap[2*i] and self.heap[i] > self.heap[2*i+1]:
 
+                tmp = self.heap[i]
+                self.heap[i] = self.heap[2*i+1]
+                self.heap[2*i+1] = tmp
+                i = 2 * i + 1
+            elif self.heap[i] > self.heap[2 * i]:
+                tmp = self.heap[i]
+                self.heap[i] = self.heap[2 * i]
+                self.heap[2 * i] = tmp
+                i = 2 * i
+            else:
+                break 
+        return res
+            
