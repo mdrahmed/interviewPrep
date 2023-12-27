@@ -37,10 +37,7 @@ class Heap:
         # go down because the minimum value is present at root so, ensure new root value is smaller than its child
         
         while 2 * i < len(self.heap):
-            if(2 * i + 1 < len(self.heap)) 
-                and self.heap[2 * i + 1] < self.heap[2 * i] 
-                and self.heap[i] > self.heap[2 * i + 1]:
-                
+            if(2 * i + 1 < len(self.heap)) and self.heap[2 * i + 1] < self.heap[2 * i] and self.heap[i] > self.heap[2 * i + 1]:
                 tmp = self.heap[i]
                 self.heap[i] = self.heap[2 * i +1]
                 self.heap[2 * i + 1] = tmp
@@ -53,8 +50,4 @@ class Heap:
             else:
                 break 
         return res
-
-
-
-
 

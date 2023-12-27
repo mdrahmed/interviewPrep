@@ -4,11 +4,36 @@ Binary search, binary search &  insertion
 BST insert & remove
 Trie
 heap
+hashing & stack & dynamic arrays
 
-hashing
-stack & queue
+queue
 graphs
 backtracking
 sorting
 recursion
 
+**Notes: don't mix the `append()` and `add()`**
+In array or stack,
+```
+append()
+pop()
+index(element, st, end)
+sort()
+reverse()
+remove()
+arr[i]
+```
+
+Stack prime functions,
+```
+add()
+set1.intersaction(set2) or set1 & set2
+set1.difference(set2) or set1 - set2
+```
+
+**for - common ideas**
+```
+#for i in range(start, end, diff):
+for i in range(len(arr)-1, -1, -1):
+    # this will reverse the array e.g., starting from (length of arr - 1) and then going back to 0
+```

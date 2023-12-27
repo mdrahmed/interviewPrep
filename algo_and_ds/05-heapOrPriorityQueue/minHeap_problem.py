@@ -26,6 +26,7 @@ heapq.heappush(<array name>, value)
 To pop a value do this,
 heapq.heappop(<array name>)
 '''
+import heapq
 
 minHeap = []
 for x,y in points:
@@ -34,7 +35,7 @@ for x,y in points:
 heapq.heapify(minHeap)
 ans = []
 while k > 0:
-    dist, x, y = heappop(minHeap)
+    dist, x, y = heapq.heappop(minHeap)
     ans.append([x,y])
     k -= 1
 return ans

@@ -4,10 +4,10 @@ All the operations of stack can be performed with the defaul array python.
 
 3 major operations in stack,
     1. push => stack.append()
-    2. pop => stack.pop()
+    2. pop => stack.pop() - this is will return the last item 
     3. peek/top => stack[0]
 
-We can also do following operations in dynamic array,
+We can also do following operations in dynamic array or stack is following,
     1. arr.index(element, start, end) => check if element is present from this starting index to the ending index.
     2. arr.remove(element) => remove this element from the array
     3. arr.reverse() => reverse the list

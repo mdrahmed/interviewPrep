@@ -3,7 +3,7 @@ A hashtable doesn't allow keys or values to set to null but a hashmap does allow
 In python a default dictionary is a hashtable - dict = {}
 Common ops in dict python,
     1. Insert => hashtable["key"] = "value"
-    2. Remove => hashtable.pop("item")
+    2. Remove => hashtable.pop("item") - don't forget to provide the key names for removing the values
                  hashtable.popitem() - this will return the most last item
     3. search => hashtable["key"]
         Using loop:
