@@ -1,4 +1,6 @@
-
+'''
+Time complexity of this solution is O(n). But if any string contains ":;" then it will make it 2 different strings. 
+'''
 """
 @param: strs: a list of strings
 @return: encodes a list of strings to a single string.
@@ -22,7 +24,7 @@ def decode(str):
     decoded_str = []
     st = 0
     for i in range(len(str)):
-        if str[i] == ':' and str[i+1] == ';' or i == len(str)-1:
+        if (str[i] == ':' and str[i+1] == ';') or i == len(str)-1:
             if len(str)-1 == i:
                 new_str = str[st:i+1]
             else:
@@ -32,6 +34,6 @@ def decode(str):
 
     return decoded_str
 
-print(encode(["abc", "next"]))
+print(encode(["abc", "nex;:t"]))
 print(decode("abc:;next"))
 
