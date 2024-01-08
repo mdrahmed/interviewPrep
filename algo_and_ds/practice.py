@@ -1,35 +1,26 @@
-from collections import deque
 
-# Matrix (2D Grid)
-grid = [[0, 0, 0, 0],
-        [1, 1, 0, 0],
-        [0, 0, 0, 1],
-        [0, 1, 0, 0]]
+def product(n):
+    if n < 10:
+        return n 
+    products = 1
+    while n > 0:
+        modu = n %10
+        n = n//10
+        products *= modu
+    return products
 
-# Shortest path from top left to bottom right
-def bfs(grid):
-    ROWS, COLS = len(grid), len(grid[0])
-    visit = set()
-    queue = deque()
-    queue.append((0, 0))
-    visit.add((0, 0))
+def isColorful(n):
+    all_products = set()
+    str_n = str(n)
+    for i in range(1,len(str_n)):
+        # 3245 0-2 1-3
+        for j in range(0,len(str_n)-i+1):
+            new_n = str_n[j:j+i]
+            new_product = product(int(new_n))
+            if new_product in all_products:
+                return False
+            all_products.add(new_product)
+    return True
 
-    length = 0
-    while queue:
-        for i in range(len(queue)):
-            r, c = queue.popleft()
-            if r == ROWS - 1 and c == COLS - 1:
-                return length
-
-            neighbors = [[0, 1], [0, -1], [1, 0], [-1, 0]]
-            for dr, dc in neighbors:
-                if (min(r + dr, c + dc) < 0 or
-                    r + dr == ROWS or c + dc == COLS or
-                    (r + dr, c + dc) in visit or grid[r + dr][c + dc] == 1):
-                    continue
-
-                queue.append((r + dr, c + dc))
-                visit.add((r + dr, c + dc))
-        length += 1
-
-print(bfs(grid))
+print(isColorful(3245))
+print(isColorful(326))

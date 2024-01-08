@@ -1,4 +1,10 @@
 '''
+To understand heap, solve this problem with the heapify function of python,
+QHEAP1: https://www.hackerrank.com/challenges/qheap1/problem
+'''
+
+
+'''
 PRIORITY QUEUE/HEAP WILL PROVIDE DATA MIN VALUE IF ITS MIN HEAP, IT WILL PROVIDE MAX VALUE IF ITS MAX HEAP
 In python, heapq.heapify(minHeap) will create min heap. There is no max heap in python but we can make values negative if we want max heap.
 

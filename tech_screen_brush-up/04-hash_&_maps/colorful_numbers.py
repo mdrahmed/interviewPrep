@@ -39,3 +39,4 @@ def isColorful(a):
     return True
 
 print(isColorful(3245))
+print(isColorful(326))
