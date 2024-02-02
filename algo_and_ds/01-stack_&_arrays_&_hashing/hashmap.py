@@ -42,10 +42,8 @@ print(hashmap.popitem())
 for k,v in hashmap.items():
     print(k,v)
 
-''' - PROBLEM - GROUP ANAGRAMS - TRY SOLVING THIS WITH A GAP OF 1 DAY
+''' - PROBLEM - GROUP ANAGRAMS - Great problem to learn about hashmap 
 from collections import defaultdict
-
-defaultdict
 
 ans = defaultdict(list)
 strs = ["eat","tea","tan","ate","nat","bat"]

@@ -24,7 +24,7 @@ remove()
 arr[i]
 ```
 
-Stack prime functions,
+Set prime functions,
 ```
 add()
 set1.intersaction(set2) or set1 & set2

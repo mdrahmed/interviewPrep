@@ -36,3 +36,4 @@ def dfs(grid, r, c, visit):
 
 print("Total paths:",dfs(grid, 0, 0, set()))
 
+Find peak of an element

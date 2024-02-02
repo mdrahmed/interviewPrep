@@ -3,8 +3,9 @@ class Solution:
         nums.sort()
         i = 0
         while i < len(nums)-1:
-            tmp = nums[i]
-            nums[i] = nums[i+1]
-            nums[i+1] = tmp
+            #tmp = nums[i]
+            #nums[i] = nums[i+1]
+            #nums[i+1] = tmp
+            nums[i],nums[i+1] = nums[i+1], nums[i]
             i += 2
         return nums

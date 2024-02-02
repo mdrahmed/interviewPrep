@@ -2,7 +2,7 @@
 In quick sort, we get a random value and compare it with the other values.
 I use the rightmost value as the pivot value.
     1. We have 2 pointers left and right
-    2. Place the values less that or equal or pivot to the left most side.
+    2. Place the values less than or equal to pivot to the left most side.
     3. Right pointer will iterate thorough the array 
     4. If a value is smaller than pivot value then it right pointer value will be swaped with the left pointer value
     5. Then left pointer will move forward
