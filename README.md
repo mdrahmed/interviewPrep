@@ -1,5 +1,28 @@
 # Common ideas
 
+## Python Quick-check
+**Python functions that requires to remember:**
+```
+ch.lower(), str.lower()
+ch.isalpha(), str.isalpha()
+```
+
+Other functions:
+```
+str.isalnum(), ch.isalnum()
+str.upper(), ch.upper()
+```
+To convert string into lowercase by removing punctuation, commas and spaces:
+`str = ""join(ch for ch in s if(ch.isalpha())`
+
+Actually, strings in Python are immutable. When you remove punctuation or convert to lowercase, you are creating new strings. So, Space complexity to remove or checking if its palindrome with `s == s[::-1]` is creating new string, so, `SO = O(n)`
+
+In python,
+```
+    while not s[start].isalpha(): start += 1
+    while not s[end].isalpha(): end -= 1
+```
+
 ## Time complexity
 **arr.sort()**
 Python uses Timsort and this sorting has `O(nlogn)` time complexity.
