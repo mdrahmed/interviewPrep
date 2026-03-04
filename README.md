@@ -1,6 +1,9 @@
 # Common ideas
 
 ## Python Quick-check
+**Core DS & techniques to quick check**
+Hashmap, Hashset, PrefixSum
+
 **Python functions that requires to remember:**
 ```
 ch.lower(), str.lower()
