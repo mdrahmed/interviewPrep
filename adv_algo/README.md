@@ -1,6 +1,6 @@
 
 
-### Topological Ordering
+### Algo 1: Topological Ordering
 A topological ordering is an ordering of nodes where for every directed edge `u -> v`, node `u` appears before node `v` in the ordering. 
 **Two important things to note:**
 1. The graph must be acyclic
@@ -41,3 +41,7 @@ def calculate_indegrees_from_adjacency_list(n, adj_list):
 ```
 
 TO: `O(n+m)`, SO: `O(n+m)`
+
+### Algo 2: Bellman-ford
+
+### Algo 3: Dijkstra
