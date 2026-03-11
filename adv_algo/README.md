@@ -2,6 +2,11 @@
 
 ### Algo 1: Topological Ordering
 A topological ordering is an ordering of nodes where for every directed edge `u -> v`, node `u` appears before node `v` in the ordering. 
+
+#### Usage of this algorithm
+1. How system decides what to compile first
+2. How schedular decides which task to run before others
+
 **Two important things to note:**
 1. The graph must be acyclic
 2. There can be more than 1 valid orderings, depends of the data structure we use e.g., Queue or Stack
