@@ -1,5 +1,5 @@
 '''
-BookChapter 27: Two PointersMerge Two Sorted Arrays
+BookChapter 27: Two Pointers: Merge Two Sorted Arrays
 
 
 # Merge Two Sorted Arrays

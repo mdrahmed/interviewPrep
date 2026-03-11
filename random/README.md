@@ -95,3 +95,17 @@ In python,
     while not s[start].isalpha(): start += 1
     while not s[end].isalpha(): end -= 1
 ```
+
+### Merge Two Sorted Arrays
+[BookChapter 27: Two Pointers Merge Two Sorted Arrays](https://start.interviewing.io/beyond-ctci/part-vii-catalog/two-pointers#merge-two-sorted-arrays)
+
+#### Approach
+Use 2 pointers, each pointing 2 arrays, put the values in result after sorting.
+
+## Random Problems
+### Topological Ordering
+[Topological Ordering](https://start.interviewing.io/beyond-ctci/solution/topological-ordering)
+
+TO & SO: `O(n+m)`
+
+For details check `adv_algo/Topological Order` folder.
