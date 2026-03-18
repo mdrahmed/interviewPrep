@@ -47,6 +47,35 @@ def calculate_indegrees_from_adjacency_list(n, adj_list):
 
 TO: `O(n+m)`, SO: `O(n+m)`
 
+## Single source shortest path algorithms
 ### Algo 2: Bellman-ford
+Bellman-Ford is a single source shortest path algorithm. It effectively works in the cases of negative edges and is able to detect negative cycles as well. It works on the principle of relaxation of the edges.
+    - Relaxation means updating the shortest distance to a node if a shorter path is found through another node e.g., update `distance[v]` if `distance[v] > distance[u] + w`
+    - This process is repeated (V-1) times.
+        - A shortest path between two vertices can have at most (V - 1) edges, it's **not possible to find shortest path with more that (V-1) edges.**
+
+#### Usage of this algorithm
+Bellman ford is suitable to find single source shortest path even when graph contains negative edges.
+
+If we need to find **single source shortest path**, we can either use **Dijkstra or, bellman ford**.
+**Dijkstra** is not suitable when,
+    - Graph contains negative edges as it doesn't revisit the nodes 
+    - It can't detect cycles (neither general cycles nor negative cycles)
+
+Again, **shortest path doesn't exist** when graph contains **negative weight cycle**,
+    - The **negative weight cycle** is the total accumulated weight of edges is less than zero.
+
+#### Limitations
+Bellmand ford can detect negative weight cycle but **not general cycle.**
+
+**Algorithm:**
+1. Create a distance array with V values containing `int(1e8)`
+2. Go through edges (V - 1) times
+    1. Relax dist edges if dist[v] > dist[u] + wt
+3. Now, go through only edges, if any edge relaxation is possible then there is a negative weight cycle.
+
 
 ### Algo 3: Dijkstra
+
+
+### Floyd Warshall
