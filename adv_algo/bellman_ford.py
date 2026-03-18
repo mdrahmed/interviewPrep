@@ -19,6 +19,7 @@ Output: [-1]
 Explanation: The graph contains a negative weight cycle formed by the path 1 → 2 → 3 → 1, where the total weight of the cycle is negative.
 '''
 
+## TO: O(V * E) for Bellman-Ford algorithm, SO: O(V) for distance array.
 
 class Solution:
     def bellmanFord(self, V, edges, src):

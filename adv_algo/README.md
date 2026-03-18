@@ -73,7 +73,9 @@ Bellmand ford can detect negative weight cycle but **not general cycle.**
 2. Go through edges (V - 1) times
     1. Relax dist edges if dist[v] > dist[u] + wt
 3. Now, go through only edges, if any edge relaxation is possible then there is a negative weight cycle.
-
+```
+TO: O(V * E) for Bellman-Ford algorithm, SO: O(V) for distance array.
+```
 
 ### Algo 3: Dijkstra
 
