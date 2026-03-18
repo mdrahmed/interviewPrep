@@ -5,8 +5,14 @@
 **Most important is to find the termination point & how left, right pointers will update**
 There are 3 different termination point, I found so far,
 1. left <= right # use when result might not present left will exceed right
+  - left and right will be updated to left = mid + 1 & right = mid - 1
+  - return target when found otherwise at the end return -1
 2. left < right  # use when result will present at left == right
+  - left will be updated to mid and right to mid - 1 or vice versa depending on the problem
+  - Return left or right as both are equal
 3. right - left > 1 # use when result is present when left & right is adjacent to each other e.g., left+1 == right
+  - left and right will be updated to mid => left = mid, right = mid
+  - return right
 **Check the questions of problem: Race Overtaking**
 
 ### Search in Sorted Array
@@ -36,6 +42,18 @@ Given that, what will l and r represent when they're next to each other?
 => l will represent the point just before overtake happened and r will represent the exact point where overtake happened
 
 => So your loop would be while l + 1 != r. Another common way to write this is while r - l > 1.
+
+
+### CCTV Footage
+[BookChapter 29: Binary Search:CCTV Footage](https://start.interviewing.io/beyond-ctci/part-vii-catalog/binary-search#cctv-footage)
+
+**Find the termination point at first:** Whats the logic behind the termination point?
+It will terminate when left and right are closest to each other e.g., left + 1 == right. Because we need to find the timestamp when the bike went missing first.
+
+**Why left and right are set to mid?**
+Right and left set to mid because, left represents the timestamp where bike is still present, right represents the timestamp where the bike went missing.
+
+
 
 
 ***
