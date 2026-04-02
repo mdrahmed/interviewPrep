@@ -67,6 +67,10 @@ Use a sliding window for every 7 day sales and count the max sales
 [Note] This is a fixed sliding window problem. Check this [Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/description/), which is a varying sliding window problem.
 
 
+### Remove Sandwiched Negatives
+It was told to **modify the array in-place** that's why, needed sliding window, otherwise, counting only negatives between same positives would be fine.
+
+
 ***
 ## Two - pointers
 
