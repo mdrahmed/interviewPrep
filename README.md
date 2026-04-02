@@ -18,7 +18,11 @@ str.upper(), ch.upper()
 To convert string into lowercase by removing punctuation, commas and spaces:
 `str = ""join(ch for ch in s if(ch.isalpha())`
 
-Actually, strings in Python are immutable. When you remove punctuation or convert to lowercase, you are creating new strings. So, Space complexity to remove or checking if its palindrome with `s == s[::-1]` is creating new string, so, `SO = O(n)`
+**Immutable or mutable**
+Actually, strings in Python are immutable. When you remove punctuation or convert to lowercase, you are creating new strings. So, Space complexity to remove or checking if its palindrome with `s == s[::-1]` is creating new string, so, `SO = O(n)`.
+Lists are mutable in python and tuples are immutable. So, I can't update tuples in place e.g., I can't do following,
+    1. stack = [(ch, cnt)] => now, I can't update it like stack[-1][1] += 1 => **not allowed**
+    2. But can be done using list, stack = [[ch, cnt]] => stack[-1][1] += 1 => **allowed**
 
 In python,
 ```
