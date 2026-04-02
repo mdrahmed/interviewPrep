@@ -27,7 +27,7 @@ Constraints:
 - `-10^9 ≤ arr[i] ≤ 10^9 (arr[i] ≠ 0)`
 
 '''
-
+## TO: O(n), SO: O(1)
 
 def remove_sandwiched_negatives(arr):
   left = 1
