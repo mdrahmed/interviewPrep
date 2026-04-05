@@ -131,3 +131,13 @@ Use 2 pointers, each pointing 2 arrays, put the values in result after sorting.
 TO & SO: `O(n+m)`
 
 For details check `adv_algo/Topological Order` folder.
+
+
+***
+## String Manipulation
+
+### String Join
+[BookChapter 26: String Manipulation: String Join](https://start.interviewing.io/beyond-ctci/part-vii-catalog/string-manipulation#string-join)
+
+Just iterate the string and put s in between. Avoid the 1st str element and put s at the end after every element.
+If there is only 1 str element then s can't be placed in between.
