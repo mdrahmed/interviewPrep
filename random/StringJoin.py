@@ -25,7 +25,7 @@ Constraints:
 
 '''
 
-
+## TO: O(n * m), SO: O(n) where n is the total length of the resulting string and m is the length of the string s.
 
 def string_join(arr, s):
   res = []
