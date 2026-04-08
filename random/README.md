@@ -1,5 +1,5 @@
 ### Table of Contents
-- [DP]
+- [DP](https://github.com/mdrahmed/interviewPrep/tree/main/random#dynamic-programming)
 - [Binary Search](https://github.com/mdrahmed/interviewPrep/tree/main/random#binary-search-problems)
 - [Sliding Window](https://github.com/mdrahmed/interviewPrep/tree/main/random#sliding-window)
 - [Two pointers](https://github.com/mdrahmed/interviewPrep/tree/main/random#two---pointers)
