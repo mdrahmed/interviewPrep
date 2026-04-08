@@ -8,6 +8,17 @@
 
 ***
 ## Dynamic Programming
+Top-down means we start from the original problem and break it down into subproblems via recursion - start from the beginning and recurse forward toward the end.
+Bottom-up (tabulation) means - we start from the end of the array and work backwards, filling in a table iteratively with no recursion at all.
+
+### Road Trip
+The first thing is to decide how many stops I can pass without taking a break => 2, so, **at each 3 stops**, I need to find which stop is optimal to take a break to find the minimal time. 
+- Check 1st 2 test cases for better understanding
+
+For the bottom-up recursive approach, we could hit stack overflow is an important catch.
+- Because at each call to minimal_break(i), you're making 3 recursive calls. Each of those makes 3 more, and so on. So the branching factor is 3 and the depth can be up to n.
+TO: O(3^n) without cache and O(n) with cache
+- We could hit a stack overflow with deep recursion at n = 10^6. One way to avoid that is to convert this to a bottom-up (tabulation) approach instead of top-down recursion.
 
 ***
 ## Binary Search problems
