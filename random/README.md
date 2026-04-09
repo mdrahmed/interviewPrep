@@ -1,5 +1,6 @@
 ### Table of Contents
 - [DP](https://github.com/mdrahmed/interviewPrep/tree/main/random#dynamic-programming)
+- [Graph]
 - [Binary Search](https://github.com/mdrahmed/interviewPrep/tree/main/random#binary-search-problems)
 - [Sliding Window](https://github.com/mdrahmed/interviewPrep/tree/main/random#sliding-window)
 - [Two pointers](https://github.com/mdrahmed/interviewPrep/tree/main/random#two---pointers)
@@ -24,6 +25,24 @@ For the bottom-up recursive approach, we could hit stack overflow is an importan
 - Because at each call to minimal_break(i), you're making 3 recursive calls. Each of those makes 3 more, and so on. So the branching factor is 3 and the depth can be up to n. So, TO: O(3^n) without cache and O(n) with cache.
 TO: O(3^n) without cache and O(n) with cache
 - We could hit a stack overflow with deep recursion at n = 10^6. One way to avoid that is to convert this to a bottom-up (tabulation) approach instead of top-down recursion.
+
+
+
+***
+## Graph Problems
+Most important graph algorithms are,
+- Bellman ford
+- Dijkstra
+- Floyd Warshall
+
+### Adjacency List Validation
+[BookChapter 36: Graphs: Adjacency List Validation](https://start.interviewing.io/beyond-ctci/part-vii-catalog/graphs#adjacency-list-validation)
+
+Try to find out terms & conditions to solve each condition, especially focus on the symmetry check - If `node1` appears in `graph[node2]`, then `node2` also appears in `graph[node1]`.
+- To check the symmetry, it's better to count the edges for each graph. 
+- There should be exactly 2 edges for each graph from `node1` to `node2`.
+- The **best way to store this is using a tuple with min and max value** e.g., `edges[min(i, node), max(i, node))] += 1`
+
 
 ***
 ## Binary Search problems
