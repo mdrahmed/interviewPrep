@@ -29,15 +29,16 @@ TO: O(3^n) without cache and O(n) with cache
 ## Binary Search problems
 **Most important is to find the termination point & how left, right pointers will update**
 There are 3 different termination point, I found so far,
-1. left <= right # use when result might not present left will exceed right
-  - left and right will be updated to left = mid + 1 & right = mid - 1
+1. `left <= right` # use when result might not present left will exceed right
+  - left and right will be updated to `left = mid + 1` & `right = mid - 1`
   - return target when found otherwise at the end return -1
-2. left < right  # use when result will present at left == right
-  - left will be updated to mid and right to mid - 1 or vice versa depending on the problem
+2. `left < right`  # use when result will present at `left == right`
+  - left will be updated to mid and right to `mid - 1` or vice versa depending on the problem
   - Return left or right as both are equal
-3. right - left > 1 # use when result is present when left & right is adjacent to each other e.g., left+1 == right
-  - left and right will be updated to mid => left = mid, right = mid
+3. `right - left > 1` # use when result is present when left & right is adjacent to each other e.g., left+1 == right
+  - left and right will be updated to `mid => left = mid`, `right = mid`
   - return right
+  - with this condition, might miss some edge cases, check `First True In Ascending Boolean Array` problem for details
 **Check the questions of problem: Race Overtaking**
 
 ### Search in Sorted Array
@@ -78,6 +79,17 @@ It will terminate when left and right are closest to each other e.g., left + 1 =
 **Why left and right are set to mid?**
 Right and left set to mid because, left represents the timestamp where bike is still present, right represents the timestamp where the bike went missing.
 
+
+### First True In Ascending Boolean Array
+[Online Materials](https://start.interviewing.io/beyond-ctci/solution/first-true-in-ascending-boolean-array#first-true-in-ascending-boolean-array)
+
+The most important point to note here is - the array is sorted in ascending order (`False` comes before `True`)
+It's binary search problem with condition 3. `right - left > 1`. But with this condition, it's possible to miss some edge cases e.g.,
+- empty array
+- first element being True, and 
+- the check before returning right
+
+Also, if last element is false then we don't need to run the loop as the array is sorted.
 
 
 
