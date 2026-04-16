@@ -9,8 +9,8 @@
 
 ***
 ## Dynamic Programming
-Top-down means we start from the original problem and break it down into subproblems via recursion - start from the beginning and recurse forward toward the end.
-Bottom-up (tabulation) means - we start from the end of the array and work backwards, filling in a table iteratively with no recursion at all.
+Top-down (recursive) means we start from the original problem and break it down into subproblems via **recursion** - start from the beginning and recurse forward toward the end.
+Bottom-up (tabulation) means - we start from the end of the array and work backwards, filling in a table **iteratively** with no recursion at all.
 
 ### Road Trip
 [BookChapter 40: Dynamic Programming: Road Trip](https://start.interviewing.io/beyond-ctci/part-vii-catalog/dynamic-programming#road-trip)
@@ -24,7 +24,8 @@ f(i) = times[i] + min(f(i+1), f(i+2), f(i+3))
 For the bottom-up recursive approach, we could hit stack overflow is an important catch.
 - Because at each call to minimal_break(i), you're making 3 recursive calls. Each of those makes 3 more, and so on. So the branching factor is 3 and the depth can be up to n. So, TO: O(3^n) without cache and O(n) with cache.
 TO: O(3^n) without cache and O(n) with cache
-- We could hit a stack overflow with deep recursion at n = 10^6. One way to avoid that is to convert this to a bottom-up (tabulation) approach instead of top-down recursion.
+  - We could hit a stack overflow with deep recursion at n = 10^6. One way to avoid that is to convert this to a bottom-up (tabulation) approach instead of top-down recursion.
+  - We could also do memoization, with memoization after using cache, the space complexity will come down to O(n). But with bottom-up iterative approach, we could further scale it to O(1).
 
 
 
