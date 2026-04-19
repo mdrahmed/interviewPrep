@@ -55,7 +55,9 @@ Bellman-Ford is a single source shortest path algorithm. It effectively works in
         - A shortest path between two vertices can have at most (V - 1) edges, it's **not possible to find shortest path with more that (V-1) edges.**
 
 #### Usage of this algorithm
-Bellman ford is suitable to find single source shortest path even when graph contains negative edges.
+Bellman ford is suitable,
+- to find single source shortest path even when graph contains negative edges.
+- designed for directed graph but can be used for undirected graphs.
 
 If we need to find **single source shortest path**, we can either use **Dijkstra or, bellman ford**.
 **Dijkstra** is not suitable when,
@@ -82,4 +84,20 @@ TO: O(V * E) for Bellman-Ford algorithm, SO: O(V) for distance array.
 
 ## All-pairs shortest path algorithms
 ### Algo 1: Floyd Warshall
+This algorithm
+- Works on 2-dimensional array
+- Finds shortest path from all pair of nodes
+- Works on both directed and undirected graphs
+- Can handle graph with both positive and negative edges
+- Does not work on graphs with negative cycles (cycle in graph whose sum of edges is negative)
+- Works better for dense graphs (no of edges are significantly higher than vertices), for sparse graph (less edges) Johnson'a algorithm is better
+- TO: O(V^3) always, no matter how many edges are there
+
+The algorithm relies on the principle that,
+- If the shortest path from i to j passes through some vertex k, then the path from i to k and path from k to j must also be shortest path.
+
+**Algorithm:**
+- For every pair (i,j) of the source and destination vertices, there are 2 possible cases
+    - k is not an intermediate vertex between i and j, `dist[i][k]` & `dist[k][j]` are INF
+    - k is an intermediate vertex between i and j then we update `dist[i][j]` as `dist[i][k] + dist[j][k]`, if `dist[i][k] + dist[j][k] < dist[i][j]`
 
