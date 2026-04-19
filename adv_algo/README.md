@@ -48,7 +48,7 @@ def calculate_indegrees_from_adjacency_list(n, adj_list):
 TO: `O(n+m)`, SO: `O(n+m)`
 
 ## Single source shortest path algorithms
-### Algo 2: Bellman-ford
+### Algo 1: Bellman-ford
 Bellman-Ford is a single source shortest path algorithm. It effectively works in the cases of negative edges and is able to detect negative cycles as well. It works on the principle of relaxation of the edges.
     - Relaxation means updating the shortest distance to a node if a shorter path is found through another node e.g., update `distance[v]` if `distance[v] > distance[u] + w`
     - This process is repeated (V-1) times.
@@ -77,7 +77,9 @@ Bellmand ford can detect negative weight cycle but **not general cycle.**
 TO: O(V * E) for Bellman-Ford algorithm, SO: O(V) for distance array.
 ```
 
-### Algo 3: Dijkstra
+### Algo 2: Dijkstra
 
 
-### Floyd Warshall
+## All-pairs shortest path algorithms
+### Algo 1: Floyd Warshall
+
