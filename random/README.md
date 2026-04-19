@@ -12,6 +12,8 @@
 Top-down (recursive) means we start from the original problem and break it down into subproblems via **recursion** - start from the beginning and recurse forward toward the end.
 Bottom-up (tabulation) means - we start from the end of the array and work backwards, filling in a table **iteratively** with no recursion at all.
 
+- The bottom-up iterative approach can achieve O(1) space since we only need the a few values. The top-down approach carries the overhead of the recursion call stack plus the cache, both O(n).
+
 ### Road Trip
 [BookChapter 40: Dynamic Programming: Road Trip](https://start.interviewing.io/beyond-ctci/part-vii-catalog/dynamic-programming#road-trip)
 The first thing is to decide how many stops I can pass without taking a break => 2, so, **at each 3 stops**, I need to find which stop is optimal to take a break to find the minimal time. 
@@ -27,6 +29,12 @@ TO: O(3^n) without cache and O(n) with cache
   - We could hit a stack overflow with deep recursion at n = 10^6. One way to avoid that is to convert this to a bottom-up (tabulation) approach instead of top-down recursion.
   - We could also do memoization, with memoization after using cache, the space complexity will come down to O(n). But with bottom-up iterative approach, we could further scale it to O(1).
 
+
+### Tiling floor
+[Tiling Floor](https://start.interviewing.io/beyond-ctci/solution/tiling-floor)
+- For top-down without cache, making 2 recursive calls, so branching factor is 2 and depth could be upto n. So, TO: O(2^n) & SO: O(1). We could hit stack overflow with deep recursion at n = 10^6.
+- Top-down with memoization, TO become O(n) and SO: O(n)
+- With bottom-up iterative approach we achieve O(1) space since we only need the last two values. The top-down approach carries the overhead of the recursion call stack plus the cache, both O(n).
 
 
 ***
@@ -110,6 +118,21 @@ It's binary search problem with condition 3. `right - left > 1`. But with this c
 - the check before returning right
 
 Also, if last element is false then we don't need to run the loop as the array is sorted.
+
+
+### First Non-Negative Number
+[First Non-Negative Number](https://start.interviewing.io/beyond-ctci/solution/first-non-negative-number)
+This is a binary search problem. 
+- The left pointer points to negative values and right pointer porints to positive values. 
+- The first positive number would be present when left and right are next to each other so, condition is check until right - left > 1. 
+- At the end, if right pointer contains the positive value then it's the result otherwise -1
+- Also, check if the first number is positive, if positive then no need to run the whole array
+
+Most important edge cases to consider:
+1. Empty array: []
+2. Array with only zero: [0]
+3. Array with only negative numbers: [-1, -2, -3]
+4. Array with first element being non-negative: [0, 1, 2, 3, 4]
 
 
 
