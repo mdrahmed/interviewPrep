@@ -7,7 +7,7 @@
 - [String Manipulation](https://github.com/mdrahmed/interviewPrep/tree/main/random#string-manipulation)
 
 
-***
+---
 ## Dynamic Programming
 Top-down (recursive) means we start from the original problem and break it down into subproblems via **recursion** - start from the beginning and recurse forward toward the end.
 Bottom-up (tabulation) means - we start from the end of the array and work backwards, filling in a table **iteratively** with no recursion at all.
@@ -37,7 +37,7 @@ TO: O(3^n) without cache and O(n) with cache
 - With bottom-up iterative approach we achieve O(1) space since we only need the last two values. The top-down approach carries the overhead of the recursion call stack plus the cache, both O(n).
 
 
-***
+---
 ## Graph Problems
 Most important graph algorithms are,
 - Bellman ford
@@ -53,7 +53,7 @@ Try to find out terms & conditions to solve each condition, especially focus on 
 - The **best way to store this is using a tuple with min and max value** e.g., `edges[min(i, node), max(i, node))] += 1`
 
 
-***
+---
 ## Binary Search problems
 **Most important is to find the termination point & how left, right pointers will update**
 There are 3 different termination point, I found so far,
@@ -136,7 +136,7 @@ Most important edge cases to consider:
 
 
 
-***
+---
 ## Sliding Window
 
 ### Most Weekly Sales
@@ -151,7 +151,7 @@ Use a sliding window for every 7 day sales and count the max sales
 It was told to **modify the array in-place** that's why, needed sliding window, otherwise, counting only negatives between same positives would be fine.
 
 
-***
+---
 ## Two - pointers
 
 ### Dutch Flag Problem
@@ -213,7 +213,7 @@ TO & SO: `O(n+m)`
 For details check `adv_algo/Topological Order` folder.
 
 
-***
+---
 ## String Manipulation
 
 ### String Join
@@ -224,3 +224,9 @@ If there is only 1 str element then s can't be placed in between.
 
 ### Remove Duplicates from String
 Store as list as list is mutable, it’s possible to update the code in place. But if I use tuple then I can’t update it in place, as tuples are immutable.
+
+
+### Palindrome Check
+[Palindrome Check](https://start.interviewing.io/login?nextPath=%2Fbeyond-ctci%2Fpart-vii-catalog%2Ftwo-pointers)
+
+Just loop until middle and check if it's the same for right chars, get right pointer index like `right - left - 1`
