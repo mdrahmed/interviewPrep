@@ -28,6 +28,10 @@ Constraints:
 - `graph.length ≤ 1000`
 - `graph[i].length ≤ 1000`
 
+
+## Problem Solving Approach:
+We can iterate through the adjacency list and check for all the conditions mentioned in the problem statement.
+We can use a set to check for parallel edges and a dictionary to count the edges for symmetry check.
 """
 
 ## Calculate time & space
@@ -36,8 +40,6 @@ TO: What about the total work across the entire graph. If we sum up the lengths 
 SO: node_set = O(V), edges = O(E), so, O(V+E)
 """
 ## TO & SO: O(V+E)
-
-
 from collections import defaultdict
 
 

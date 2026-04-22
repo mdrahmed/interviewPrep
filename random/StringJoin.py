@@ -1,4 +1,4 @@
-'''
+"""
 BookChapter 26: String Manipulation: String Join
 
 # String Join
@@ -23,23 +23,26 @@ Constraints:
 - 0 <= arr[i].length <= 10^5
 - the sum of the lengths of the strings in `arr` is at most 10^5
 
-'''
+## Problem Solving Approach:
+We can iterate through the array of strings and for each string, we can append it to the result string.
+If it's not the first string, we can append the separator string `s` as `s` should be in between the strings in `arr`.
+"""
+
 
 ## TO: O(n * m), SO: O(n) where n is the total length of the resulting string and m is the length of the string s.
-
 def string_join(arr, s):
-  res = []
-  for i, ele in enumerate(arr):
-    if i != 0:
-      for c in s:
-        res.append(c)
-    for c in ele:
-      res.append(c)
-  return array_to_string(res)
+    res = []
+    for i, ele in enumerate(arr):
+        if i != 0:
+            for c in s:
+                res.append(c)
+        for c in ele:
+            res.append(c)
+    return array_to_string(res)
 
 
 def array_to_string(arr):
-  return ''.join(arr)
+    return "".join(arr)
 
 
 ### Testing Phase ###
@@ -48,7 +51,11 @@ def run_tests():
         # Example 1 from the book
         (["join", "by", "space"], " ", "join by space"),
         # Example 2 from the book
-        (["b", "", "k", "", "p", "r n", "", "d", "d!!"], "ee", "beeeekeeeepeer neeeedeed!!"),
+        (
+            ["b", "", "k", "", "p", "r n", "", "d", "d!!"],
+            "ee",
+            "beeeekeeeepeer neeeedeed!!",
+        ),
         # Example 3 from the book
         ([], "x", ""),
         # Additional test cases
@@ -58,14 +65,19 @@ def run_tests():
         (["x", "", "y"], "*", "x**y"),
         (["", "", ""], "z", "zz"),
         (["single"], "", "single"),
-        (["multiple", "strings", "test"], " | ", "multiple | strings | test")
+        (["multiple", "strings", "test"], " | ", "multiple | strings | test"),
     ]
-    
+
     for i, (arr, s, expected) in enumerate(tests):
         result = string_join(arr, s)
-        print(f"Test case {i+1}: arr={arr}, s='{s}', expected='{expected}', got='{result}'")
-        assert result == expected, f"Test case {i+1} failed: expected '{expected}', got '{result}'"
+        print(
+            f"Test case {i+1}: arr={arr}, s='{s}', expected='{expected}', got='{result}'"
+        )
+        assert (
+            result == expected
+        ), f"Test case {i+1} failed: expected '{expected}', got '{result}'"
     print("All test cases passed!")
 
 
-if __name__ == "__main__":  run_tests()
+if __name__ == "__main__":
+    run_tests()
