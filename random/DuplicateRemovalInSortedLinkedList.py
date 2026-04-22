@@ -24,6 +24,8 @@ Iterate list and for each node, check if the next node has the same value.
 If same, keep moving the next pointer until a different value.
 Then, skip all the duplicates by updating the current node's next pointer.
 
+Note: The class Node must be defined, so, check it carefully.
+
 """
 
 # TO: O(n)
