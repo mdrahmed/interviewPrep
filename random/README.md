@@ -5,7 +5,7 @@
 - [Sliding Window](https://github.com/mdrahmed/interviewPrep/tree/main/random#sliding-window)
 - [Two pointers](https://github.com/mdrahmed/interviewPrep/tree/main/random#two---pointers)
 - [String Manipulation](https://github.com/mdrahmed/interviewPrep/tree/main/random#string-manipulation)
-
+- [Others]
 
 ---
 ## Dynamic Programming
@@ -230,3 +230,10 @@ Store as list as list is mutable, it’s possible to update the code in place. B
 [Palindrome Check](https://start.interviewing.io/login?nextPath=%2Fbeyond-ctci%2Fpart-vii-catalog%2Ftwo-pointers)
 
 Just loop until middle and check if it's the same for right chars, get right pointer index like `right - left - 1`
+
+
+---
+## Others
+### Validate Matrix Rows and Columns
+[Validate Matrix Rows and Columns](https://start.interviewing.io/login?nextPath=%2Fbeyond-ctci%2Fsolution%2Fvalidate-matrix-rows-columns)
+Just use a set to check for duplicates.
