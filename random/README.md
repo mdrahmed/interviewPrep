@@ -237,3 +237,8 @@ Just loop until middle and check if it's the same for right chars, get right poi
 ### Validate Matrix Rows and Columns
 [Validate Matrix Rows and Columns](https://start.interviewing.io/login?nextPath=%2Fbeyond-ctci%2Fsolution%2Fvalidate-matrix-rows-columns)
 Just use a set to check for duplicates.
+
+### Duplicate Removal In Sorted Linked List
+[Duplicate Removal In Sorted Linked List](https://start.interviewing.io/login?nextPath=%2Fbeyond-ctci%2Fpart-vii-catalog%2Flinked-lists)
+
+Traverse the list, for each node, check if the next node val is same with a different pointer. If same then move until the next different value. When found terminate loop and update the current node's next pointer to `dup->next`.
