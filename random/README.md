@@ -5,7 +5,7 @@
 - [Sliding Window](https://github.com/mdrahmed/interviewPrep/tree/main/random#sliding-window)
 - [Two pointers](https://github.com/mdrahmed/interviewPrep/tree/main/random#two---pointers)
 - [String Manipulation](https://github.com/mdrahmed/interviewPrep/tree/main/random#string-manipulation)
-- [Others]
+- [Others](https://github.com/mdrahmed/interviewPrep/tree/main/random#others)
 
 ---
 ## Dynamic Programming
