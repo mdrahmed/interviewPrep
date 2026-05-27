@@ -254,3 +254,7 @@ For time complexity — think about how many times each integer in the entire ne
 Recursive call processes the elements of one specific sub-array. Across all recursive calls combined, each integer is visited exactly once. So if n is the total number of integers in the nested array, so TC is `O(n)`
 
 For space complexity, think about what determines how deep the recursion stack goes. If we call maximum recursion nesting depth d, then SC is `O(d)`.
+
+If we use a queue to solve this problem then TC stays same but for space complexity, in the queue approach, when we encounter an array, we’re adding all of its elements to the queue. Consider the first example: [1, [2, 3], [4, [5]], 6] — at some point, all the individual integers could end up in the queue at the same time. So the SC is `O(n)`
+
+So both approaches have O(n) time, but the recursive solution is more space-efficient at O(d) compared to the queue-based approach at O(n).
