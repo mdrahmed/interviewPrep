@@ -36,8 +36,9 @@ We can use a set to check for parallel edges and a dictionary to count the edges
 
 ## Calculate time & space
 """
-TO: What about the total work across the entire graph. If we sum up the lengths of all the adjacency lists — len(graph[0]) + len(graph[1]) + ... + len(graph[V-1]) — what does that total time complexity equal in terms of V and E?
-SO: node_set = O(V), edges = O(E), so, O(V+E)
+TC: What about the total work across the entire graph. If we sum up the lengths of all the adjacency lists — len(graph[0]) + len(graph[1]) + ... + len(graph[V-1]) — what does that total time complexity equal in terms of V and E?
+    O(V + E) because we visit each node and edge once.
+SC: node_set = O(V), edges = O(E), so, O(V+E)
 """
 ## TO & SO: O(V+E)
 from collections import defaultdict

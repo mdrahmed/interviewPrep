@@ -52,6 +52,7 @@ Try to find out terms & conditions to solve each condition, especially focus on 
 - There should be exactly 2 edges for each graph from `node1` to `node2`.
 - The **best way to store this is using a tuple with min and max value** e.g., `edges[min(i, node), max(i, node))] += 1`
 
+Time Complexity: Each node is visited once, and each edge entry in the adjacency list is visited once, so the total time is O(V + E).
 
 ---
 ## Binary Search problems
@@ -242,3 +243,14 @@ Just use a set to check for duplicates.
 [Duplicate Removal In Sorted Linked List](https://start.interviewing.io/login?nextPath=%2Fbeyond-ctci%2Fpart-vii-catalog%2Flinked-lists)
 
 Traverse the list, for each node, check if the next node val is same with a different pointer. If same then move until the next different value. When found terminate loop and update the current node's next pointer to `dup->next`.
+
+### Nested Array Sum
+[Book Chapter 33: Recursion Nested Array Sum](https://start.interviewing.io/beyond-ctci/part-vii-catalog/recursion#nested-array-sum)
+For recursive approach, at first think about the base case and then what it will return.
+The `isinstance()` function in Python is a built-in tool used to check if an object belongs to a specified class or data type. 
+  - `isinstance(val, int)` => checks where the val is an integer or not
+
+For time complexity — think about how many times each integer in the entire nested structure gets visited. Across all the recursive calls, how many times is each integer processed?
+Recursive call processes the elements of one specific sub-array. Across all recursive calls combined, each integer is visited exactly once. So if n is the total number of integers in the nested array, so TC is `O(n)`
+
+For space complexity, think about what determines how deep the recursion stack goes. If we call maximum recursion nesting depth d, then SC is `O(d)`.
