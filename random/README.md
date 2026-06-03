@@ -261,6 +261,10 @@ So both approaches have O(n) time, but the recursive solution is more space-effi
 
 ### Most Frequent Octet
 [Most Frequent Octet](https://start.interviewing.io/beyond-ctci/part-vii-catalog/sets-&-maps#most-frequent-octet-solution)
-An octet contains 8 bits, it can represent exactly \(2^{8}\) (or 256) possible values.
+An octet contains 8 bits, it can represent exactly \(2^8\) (or 256) possible values.
 So, just use a hashmap of 256 range to find the first most frequent octet.
+
+### Shortest Distance Number Repeated
+[Shortest Distance Number Repeated](https://start.interviewing.io/beyond-ctci/solution/shortest-distance-number-repeated)
+Soln is to use a hashmap
 
