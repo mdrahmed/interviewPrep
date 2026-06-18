@@ -270,3 +270,10 @@ So, just use a hashmap of 256 range to find the first most frequent octet.
 
 Soln is to use a hashmap
 
+### Others
+[Word Expansion Class](https://start.interviewing.io/beyond-ctci/part-vii-catalog/sets-&-maps#word-expansion-class)
+[Most Shared Account](https://start.interviewing.io/beyond-ctci/part-vii-catalog/sets-&-maps#most-shared-account-solution)
+[Is Reachable](https://start.interviewing.io/beyond-ctci/solution/is-reachable)
+
+
+
